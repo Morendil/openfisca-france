@@ -1,5 +1,15 @@
 # Changelog
 
+## 27.0.1 [#1162](https://github.com/openfisca/openfisca-france/pull/1162)
+
+* Changement mineur.
+* Périodes concernées : toutes.
+* Zones impactées : `openfisca_france/parameters/**/*.yaml`.
+* Détails :
+  - Unifie les références législatives associées aux paramètres
+    - Supprime les `reference: openfisca`
+    - Modifie `reference: ipp` pour inclure l'URL des barèmes IPP
+
 # 27.0.0 [#1150](https://github.com/openfisca/openfisca-france/pull/1150)
 
 * Évolution du système socio-fiscal **non rétro-compatible**
