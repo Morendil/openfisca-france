@@ -171,6 +171,15 @@ Pour faire tourner les tests d'OpenFisca-France, exécutez la commande suivante�
 make test
 ```
 
+Si vous ajoutez des fichiers statiques, par exemple une situation au format `json`, nécessaires au fonctionnement de la librairie OpenFisca-France, vous devez le rendre découvrable par le fichier `MANIFEST.in`.
+
+Pour s'assurer que ce soit le cas, exécutez la commande suivante :
+
+```sh
+make build
+make test
+```
+
 ## Style
 
 Ce dépôt adhère à un style de code précis, et on vous invite à le suivre pour que vos contributions soient intégrées au plus vite.
