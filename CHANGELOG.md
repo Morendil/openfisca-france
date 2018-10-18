@@ -1,5 +1,14 @@
 # Changelog
 
+## 27.1.1 [#1178](https://github.com/openfisca/openfisca-france/pull/1178)
+
+* Changement mineur
+* Périodes concernées : toutes
+* Zones impactées : `.circleci`, `Makefile`, 'MANIFEST.in`, `README.md`
+* Détails :
+  - Lors de l'ajout d'un fichier statique requis pour le fonctionnement de la librairie, nous devons le rendre découvrable par `wheel`
+  - Pour éviter des soucis involontaires de packaging, on _build_ désormais la librairie, et on exécute les tests contre la version qui sera mise à disposition des usagers
+
 ## 27.1.0 [#1152](https://github.com/openfisca/openfisca-france/pull/1152)
 
 * Évolution du système socio-fiscal.
