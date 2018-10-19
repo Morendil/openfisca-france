@@ -33,7 +33,7 @@ jobs:
       - run:
           name: Run tests
           command: |
-            nosetests `circleci tests glob "tests/**/*.py" | circleci tests split`
+            pytest `circleci tests glob "tests/**/*.py" | circleci tests split`
             openfisca-run-test `circleci tests glob "tests/**/*.{yaml,yml}" | circleci tests split`
 
   build_python3:
@@ -68,7 +68,7 @@ jobs:
       - run:
           name: Run tests
           command: |
-            nosetests `circleci tests glob "tests/**/*.py" | circleci tests split`
+            pytest `circleci tests glob "tests/**/*.py" | circleci tests split`
             openfisca-run-test `circleci tests glob "tests/**/*.{yaml,yml}" | circleci tests split`
 
   lint_yaml_files:
@@ -109,7 +109,6 @@ jobs:
       - run:
           name: Lint files
           command: |
-            make check-no-prints
             make check-syntax-errors
             .circleci/lint-changed-python-files.sh
 
