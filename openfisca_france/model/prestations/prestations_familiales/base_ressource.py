@@ -89,7 +89,7 @@ class biactivite(Variable):
         pfam = parameters(annee_fiscale_n_2).prestations.prestations_familiales
         seuil_rev = 12 * pfam.af.bmaf
 
-        condition_ressource = famille.members('prestations_familiales_base_ressources_individu', period) >= seuil_rev
+        condition_ressource = famille.members('revenus_nets_du_travail', period) >= seuil_rev
         deux_parents = famille.nb_persons(role = famille.PARENT) == 2
 
         return deux_parents * famille.all(condition_ressource, role = famille.PARENT)
